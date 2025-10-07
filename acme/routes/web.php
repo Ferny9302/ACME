@@ -13,3 +13,7 @@ Route::group(['prefix'=>'dashboard'],function(){
     Route::get("/blueprint",[BlueprintController::class,'getBlueprint']);
     Route::post("/blueprint",[BlueprintController::class,'createBlueprint']);
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
